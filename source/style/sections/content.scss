@@ -1,0 +1,222 @@
+.content {
+    width: 95vw;
+    background-color: #fff;
+    margin: 0 auto ;
+    text-align: center;
+    margin-top: rem(137px);
+
+    @include laptop() {
+        margin-top: rem(90px);
+    }
+
+    @include phones() {
+        margin-top: rem(45px);
+    }
+}
+
+.content__head {
+    font-family: 'lato_regular', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: rem(32px);
+    padding: 0;
+    font-size: rem(72px);
+    text-transform: uppercase;
+    color: $text;
+    letter-spacing: 2px;
+    text-align: center;
+
+    @include laptop() {
+        font-size: rem(50px);
+        margin-bottom: rem(20px);
+    }
+
+    @include phones() {
+        font-size: rem(25px);
+        margin-bottom: rem(15px);
+    }
+}
+
+.content__description {
+    font-family: 'georgia_italic',serif;
+    font-size: rem(24px);
+    font-weight: 100;
+    color: rgba(#606060, .8);
+    margin: 0;
+    margin-bottom: rem(63px);
+
+    @include laptop() {
+        font-size: rem(18px);
+        margin-bottom: rem(35px);
+    }
+
+    @include phones() {
+        font-size: rem(16px);
+        margin-bottom: rem(15px);
+    }
+}
+
+.content__link-wrapper {
+    height: rem(55px);
+    text-align: center;
+}
+
+.content__link {
+    font-size: rem(14px);
+    color: #959595;
+    box-sizing: border-box;
+    width: rem(227px);
+    height: 100%;
+    line-height: rem(55px);
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #606060;
+    transition: all .3s;
+    &:hover {
+        transition: all .3s;
+        background-color: #606060;
+        color: #fff;
+    }
+}
+
+.products {
+    //background-color: #d2d2d2;
+    width: 100%;
+    margin-top: rem(150px);
+    @extend %clearfix;
+
+    @include laptop() {
+        margin-top: rem(70px);
+    }
+
+    @include phones() {
+        margin-top: rem(30px);
+    }
+}
+
+.product__item {
+    width: 95/4 + 0vw;
+    height: 95/4 + 0vw;;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    opacity: 0;
+
+    @include tablets() {
+        width: 95/3 + 0vw;
+        height: 95/3 + 0vw;
+    }
+
+    @include phones() {
+        width: 95/2 + 0vw;
+        height: 95/2 + 0vw;
+    }
+}
+
+.product__item_twitt {
+    background-color: #bbb;
+}
+
+.product__item_price {
+    background-color: #cacaca;
+}
+
+.product__item_look {
+    background-color: #606060;
+}
+
+.product__item_empty {
+    background-color: #dbdbdb;
+}
+
+.product__item_x2 {
+    height: 95/2 + 0vw;
+    background-color: #d2d2d2;
+
+    @include tablets() {
+        height: 95/1.501 + 0vw;
+    }
+
+    @include phones() {
+        width: 95/2 + 0vw;
+        height: 95/2 + 0vw;
+    }
+}
+
+.product__item_x2-right {
+    height: 95/2 + 0vw;
+    float: right;
+}
+
+.product__item_right {
+    float: right;
+}
+
+.product__content {
+    display: inline-block;
+    width: 80%;
+    @include centered-abs();
+}
+
+.product__name {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: rem(20px);
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 0;
+    margin-bottom: rem(8px);
+}
+
+.product__descr {
+    font-family: 'georgia_italic', serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: rem(17px);
+    color: #fff;
+
+}
+
+/*fa-icon*/
+
+.product__icon {
+    position: relative;
+    display: inline-block;
+    font-size:rem(30px);
+    color: #fff;
+    &::before,
+    &::after{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 1px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: -30px;
+    }
+
+    &::after {
+        left: auto;
+        right: -30px;
+    }
+}
+
+.product__twitt {
+    font-family: 'georgia_italic', serif;
+    font-size: rem(14px);
+    color: #fff;
+}
+
+.twitt__author {
+    font-family: 'lato_bold', sans-serif;
+    font-size: 14px;
+    color: #fff;
+}
+
+.product__icon_arrow {
+    display: inline-block;
+    font-size:rem(25px);
+    color: #fff;
+}

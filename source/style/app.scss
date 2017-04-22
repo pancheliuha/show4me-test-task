@@ -1,0 +1,21 @@
+
+
+
+$text: #303030;
+$white: rgba(#fff, .9);
+$sliderWidth: 100;
+$sliderMount: 6;
+$sliderMountPhones: 3;
+
+
+@import "font-awesome/font-awesome";
+@import "common/_mixins";
+@import "common/fonts";
+@import "common/extends";
+@import "common/animations";
+@import "common/adjustment";
+
+
+
+//styles
+@import "sections/**/*.scss";

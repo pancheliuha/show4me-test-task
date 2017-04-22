@@ -1,0 +1,130 @@
+.signIn {
+    width: 95vw;
+    height: rem(450px);
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.signIn__content {
+    width: 100%;
+    @include centered-abs();
+}
+
+.signIn__header {
+    font-family: 'lato_bold', sans-serif;
+    font-size: rem(36px);
+    color: #303030;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: rem(20px);
+
+    @include tablets() {
+        font-size: rem(25px);
+    }
+
+    @include phones() {
+        font-size: rem(19px);
+    }
+}
+
+.signIn__descr {
+    font-family: 'georgia_italic', serif;
+    font-size: rem(18px);
+    font-weight: 200;
+    color: #606060;
+    margin: 0;
+    margin-bottom: rem(50px);
+
+}
+
+.signIn__form {
+    display: inline-block;
+    height: rem(50px);
+    width: rem(570px);
+    text-align: center;
+    @extend %clearfix;
+    position: relative;
+
+    @include tablets() {
+        width: rem(470px);
+    }
+
+    @include phones() {
+        width: rem(270px);
+    }
+}
+
+.email {
+    box-sizing: border-box;
+    height: rem(50px);
+    width: rem(470px);
+    border: 1px solid #959595;
+    padding-left: rem(10px);
+    font-family: 'lato_italic', sans-serif;
+    font-size: rem(14px);
+    float: left;
+    outline: none;
+
+    @include tablets() {
+        width: rem(370px);
+    }
+
+    @include phones() {
+        width: rem(170px);
+    }
+
+
+
+    &::-webkit-input-placeholder       {text-indent: 0px; color: rgba(#606060, .9);   transition: text-indent 0.3s ease;}
+    &::-moz-placeholder                {text-indent: 0px; color: rgba(#606060, .9);  transition: text-indent 0.3s ease;}
+    &:-moz-placeholder                 {text-indent: 0px; color: rgba(#606060, .9);  transition: text-indent 0.3s ease;}
+    &:-ms-input-placeholder            {text-indent: 0px; color: rgba(#606060, .9);   transition: text-indent 0.3s ease;}
+    &:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
+    &:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
+    &:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
+    &:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
+
+}
+
+.submit {
+    height: rem(50px);
+    width: rem(94px);
+    background-color: #f68236;
+    color: #fff;
+    transition: all .3s;
+    border: none;
+    outline: none;
+    transform: translateX(-5px);
+
+    &:hover {
+        background-color: #717171;
+        transition: all .3s;
+        cursor: pointer;
+    }
+}
+
+.error-block {
+    margin-top: rem(10px);
+    visibility: hidden;
+    color: #ed1c24;
+    font-weight: 100;
+    font-family: 'lato_italic', sans-serif;
+    font-size: rem(14px);
+
+    &.visible {
+        visibility: visible;
+    }
+}
+
+.success__send {
+    font-family: 'lato_bold', sans-serif;
+    font-size: rem(24px);
+    color: #606060;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    @include centered-abs;
+    visibility: hidden;
+
+}

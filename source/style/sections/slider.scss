@@ -1,0 +1,93 @@
+.slider {
+    width: 95vw;
+    height: rem(120px);
+    margin: 0 auto;
+    background-color: #ccc;
+    position: relative;
+}
+
+.slider__nav {
+    width: rem(40px);
+    height: 100%;
+    position: absolute;
+    background-color: #e4e4e4;
+    line-height: 100%;
+    outline: none;
+    border: none;
+    font-size: 60px;
+    color: #fff;
+    transition: all .3s;
+
+    &:hover {
+        transition: all .3s;
+        cursor: pointer;
+        background-color: darken(#e4e4e4, 20%);
+    }
+}
+
+.slider__previous {
+    left: 0;
+}
+
+.slider__next {
+    right: 0;
+}
+
+.slider__list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    @extend %clearfix;
+    overflow: hidden;
+}
+.slider__item {
+    display: inline-block;
+    float: left;
+    width: $sliderWidth/$sliderMount + 0%;
+    height: 100%;
+    position: relative;
+
+    @include phones() {
+        width: $sliderWidth/$sliderMountPhones + 0%;
+    }
+}
+
+.slider__img {
+    @include centered-pos();
+    width: 50%;
+}
+
+.slider__item {
+    display: none;
+}
+
+.slider__visible {
+    display: inline-block;
+}
+
+.first__require {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -$sliderWidth/$sliderMount + 0%;
+    right: auto;
+
+    @include phones() {
+        left: -$sliderWidth/$sliderMountPhones + 0%;
+    }
+}
+
+.last__require {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -$sliderWidth/$sliderMount + 0%;
+    left: auto;
+
+    @include phones() {
+        right: -$sliderWidth/$sliderMountPhones + 0%;
+    }
+}
